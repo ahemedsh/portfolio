@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Contact Form Submission (Simulated)
+  // Contact Form Submission (Active AJAX via FormSubmit)
   const contactForm = document.getElementById('contact-form');
   const formMessage = document.getElementById('form-message');
 
@@ -95,21 +95,42 @@ document.addEventListener('DOMContentLoaded', () => {
       // Visual feedback loading state
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending...';
+      formMessage.style.display = 'block';
+      formMessage.className = 'form-message info';
+      formMessage.textContent = 'Sending message...';
 
-      setTimeout(() => {
-        submitBtn.textContent = 'Message Sent';
-        formMessage.textContent = 'Thank you! Your message has been sent successfully. Ahemed will get back to you shortly.';
-        formMessage.classList.add('success');
-        
-        contactForm.reset();
-        
+      const formData = new FormData(contactForm);
+
+      fetch('https://formsubmit.co/ajax/ahemed2h6z@gmail.com', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          submitBtn.textContent = 'Message Sent';
+          formMessage.textContent = 'Thank you! Your message has been sent successfully. I will get back to you shortly.';
+          formMessage.className = 'form-message success';
+          contactForm.reset();
+        } else {
+          throw new Error('Network response error');
+        }
+      })
+      .catch(error => {
+        submitBtn.textContent = 'Failed';
+        formMessage.textContent = 'Oops! There was a problem sending your message. Please email me directly at ahemed2h6z@gmail.com.';
+        formMessage.className = 'form-message error';
+      })
+      .finally(() => {
         setTimeout(() => {
           formMessage.style.display = 'none';
-          formMessage.classList.remove('success');
+          formMessage.classList.remove('success', 'error', 'info');
           submitBtn.disabled = false;
           submitBtn.textContent = originalText;
-        }, 5000);
-      }, 1200);
+        }, 6000);
+      });
     });
   }
 
