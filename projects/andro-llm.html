@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ANDRO-LLM project details by Ahemed Sakeer Hussain.">
+  <title>ANDRO-LLM | Project Details</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER
+       ========================================================================== -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="../index.html" class="logo">
+        AHEMED SAKEER HUSSAIN
+        <span class="logo-dot"></span>
+      </a>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="../index.html#home" class="nav-link">Home</a></li>
+          <li><a href="../index.html#about" class="nav-link">About</a></li>
+          <li><a href="../index.html#projects" class="nav-link active">Projects</a></li>
+          <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- Project Header -->
+      <section class="project-header">
+        <a href="../index.html#projects" class="back-link">
+          ← Back to Projects
+        </a>
+        <h1 class="display-title" style="font-size: 2.75rem; margin-top: 1rem;">
+          ANDRO-LLM
+        </h1>
+        <p class="hero-subheadline" style="margin-bottom: var(--spacing-md);">Offline Local Conversational AI for Mobile Devices</p>
+        
+        <div class="project-meta-grid">
+          <div>
+            <p class="text-secondary body-large">
+              A native Android implementation of highly optimized, quantized large language models (LLMs) executing local, offline inference via a modern, clean Flutter UI dashboard.
+            </p>
+          </div>
+          <div class="project-meta-list">
+            <div>
+              <div class="meta-item-label">Timeline</div>
+              <div class="meta-item-value">4 Months (2025)</div>
+            </div>
+            <div>
+              <div class="meta-item-label">Role</div>
+              <div class="meta-item-value">Mobile & Core Developer</div>
+            </div>
+            <div>
+              <div class="meta-item-label">Languages</div>
+              <div class="meta-item-value">C++, Dart, Kotlin</div>
+            </div>
+            <div>
+              <div class="meta-item-label">Backend</div>
+              <div class="meta-item-value">llama.cpp Engine</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="btn-group" style="margin-top: var(--spacing-md);">
+          <a href="https://github.com/Anwin-127/Andro-LLM" target="_blank" rel="noopener" class="btn btn-primary">GitHub Repository</a>
+        </div>
+      </section>
+
+      <!-- Problem & Solution -->
+      <section class="detail-section">
+        <div class="detail-grid">
+          <div>
+            <h2 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">The Problem</h2>
+            <p>
+              Contemporary LLM systems rely heavily on remote cloud services (such as OpenAI, Anthropic, or Gemini API endpoints). This requires constant active network connectivity, incurs network billing, and creates significant data privacy concerns.
+            </p>
+            <p style="margin-top: 1rem;">
+              Recruiters and enterprise users processing sensitive personal summaries or offline fields are hesitant to pass records to external servers, creating a major need for local conversational frameworks.
+            </p>
+          </div>
+          <div>
+            <h2 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">The Solution</h2>
+            <p>
+              ANDRO-LLM bypasses external cloud dependencies by compiling llama.cpp natively for Android targets. By compiling raw C++ libraries, model weights can be read directly from device flash memory.
+            </p>
+            <p style="margin-top: 1rem;">
+              A responsive Flutter frontend communicates with the underlying compiled native libraries via Dart FFI channels, offering smooth, zero-latency chats and real-time generation previews.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Architecture -->
+      <section class="detail-section">
+        <h2 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Process Architecture</h2>
+        <div class="architecture-box">
+          <svg viewBox="0 0 600 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- UI Layer -->
+            <rect x="20" y="80" width="100" height="80" rx="8" fill="#F5F5F7" stroke="#E5E5E7" stroke-width="2"/>
+            <text x="32" y="115" fill="#111111" font-family="Inter" font-size="11" font-weight="700">Flutter UI</text>
+            <text x="32" y="135" fill="#6E6E73" font-family="Inter" font-size="9" font-weight="500">Dart Widgets</text>
+
+            <!-- Arrow 1 (FFI Bindings) -->
+            <path d="M130 120H170" stroke="#111111" stroke-width="2"/>
+            <path d="M170 120L162 115M170 120L162 125" stroke="#111111" stroke-width="2"/>
+
+            <!-- Dart FFI Interface -->
+            <rect x="180" y="80" width="110" height="80" rx="8" fill="#F5F5F7" stroke="#E5E5E7" stroke-width="2"/>
+            <text x="192" y="115" fill="#111111" font-family="Inter" font-size="11" font-weight="700">Dart FFI</text>
+            <text x="192" y="135" fill="#6E6E73" font-family="Inter" font-size="9" font-weight="500">C Interface Bind</text>
+
+            <!-- Arrow 2 -->
+            <path d="M300 120H340" stroke="#111111" stroke-width="2"/>
+            <path d="M340 120L332 115M340 120L332 125" stroke="#111111" stroke-width="2"/>
+
+            <!-- C++ JNI llama.cpp -->
+            <rect x="350" y="80" width="110" height="80" rx="8" fill="#F5F5F7" stroke="#E5E5E7" stroke-width="2"/>
+            <text x="362" y="115" fill="#111111" font-family="Inter" font-size="11" font-weight="700">llama.cpp Engine</text>
+            <text x="362" y="135" fill="#6E6E73" font-family="Inter" font-size="9" font-weight="500">Native C++ ARM64</text>
+
+            <!-- Arrow 3 -->
+            <path d="M470 120H510" stroke="#111111" stroke-width="2"/>
+            <path d="M510 120L502 115M510 120L502 125" stroke="#111111" stroke-width="2"/>
+
+            <!-- GGUF Quantized Weights -->
+            <rect x="520" y="80" width="60" height="80" rx="8" fill="#111111"/>
+            <text x="532" y="115" fill="#FFFFFF" font-family="Inter" font-size="11" font-weight="700">GGUF File</text>
+            <text x="532" y="135" fill="#FFFFFF" font-family="Inter" font-size="9" font-style="italic">Model (2.4GB)</text>
+          </svg>
+        </div>
+      </section>
+
+      <!-- Key Features & Tech Stack -->
+      <section class="detail-section">
+        <div class="detail-grid">
+          <div>
+            <h2 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Key Features</h2>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
+              <li><strong>Offline Conversational Engine:</strong> Runs complete text processing locally without internet.</li>
+              <li><strong>Quantized Model Execution:</strong> Loads 4-bit integer quantized (GGUF) parameters, minimizing RAM usage to fit standard mobile memory ceilings.</li>
+              <li><strong>Native Compilation:</strong> Compiles C++ source utilizing ARM Neon SIMD intrinsics for optimized CPU calculations.</li>
+              <li><strong>Dart FFI:</strong> Fast data sharing across the managed Flutter runtime and native memory space.</li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Tech Stack</h2>
+            <div class="project-tags" style="margin-bottom: 1.5rem;">
+              <span class="tag">Flutter</span>
+              <span class="tag">Dart</span>
+              <span class="tag">C++</span>
+              <span class="tag">llama.cpp</span>
+              <span class="tag">Android NDK</span>
+              <span class="tag">CMake</span>
+            </div>
+            <h3 class="card-title" style="font-size: 1.1rem; margin-bottom: 0.5rem;">Key Challenge</h3>
+            <p>
+              Handling garbage collection during massive text generation events. Passing large chunks of string allocations from native memory to Dart's managed garbage collector caused visual frame drops. Resolved this by establishing pre-allocated pointer buffers and streaming token indices instead of raw texts.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Outcome -->
+      <section class="detail-section">
+        <h2 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Outcome & Impact</h2>
+        <p class="body-large" style="margin-bottom: 1.5rem;">
+          ANDRO-LLM showcases how modern mobile hardware can run local generative models without relying on remote API subscriptions. On testing mid-tier devices (e.g. Snapdragon 778G), the system outputs 12-14 tokens per second utilizing a 3B parameter model, maintaining memory under 2.5GB.
+        </p>
+      </section>
+
+      <!-- Navigation -->
+      <section class="project-navigation">
+        <a href="demandiq.html" class="nav-proj-link">
+          <span class="nav-proj-sub">← Previous Project</span>
+          <span class="nav-proj-title">DemandIQ</span>
+        </a>
+        <a href="ecowatt.html" class="nav-proj-link next">
+          <span class="nav-proj-sub">Next Project →</span>
+          <span class="nav-proj-title">EcoWatt</span>
+        </a>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-text">
+        © 2026 Ahemed Sakeer Hussain. Built with clean CSS and semantic HTML.
+      </div>
+      <ul class="footer-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>

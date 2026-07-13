@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DemandIQ retail analytics project details by Ahemed Sakeer Hussain.">
+  <title>DemandIQ | Project Details</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER
+       ========================================================================== -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="../index.html" class="logo">
+        AHEMED SAKEER HUSSAIN
+        <span class="logo-dot"></span>
+      </a>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="../index.html#home" class="nav-link">Home</a></li>
+          <li><a href="../index.html#about" class="nav-link">About</a></li>
+          <li><a href="../index.html#projects" class="nav-link active">Projects</a></li>
+          <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- Project Header -->
+      <section class="project-header">
+        <a href="../index.html#projects" class="back-link">
+          ← Back to Projects
+        </a>
+        <h1 class="display-title" style="font-size: 2.75rem; margin-top: 1rem;">
+          DemandIQ
+        </h1>
+        <p class="hero-subheadline" style="margin-bottom: var(--spacing-md);">Retail Demand Forecasting & Inventory Analysis</p>
+        
+        <div class="project-meta-grid">
+          <div>
+            <p class="text-secondary body-large">
+              A retail intelligence suite focused on predicting daily customer demand, identifying out-of-stock risks, segmenting purchasing frequencies, and generating automated executive inventory reviews.
+            </p>
+          </div>
+          <div class="project-meta-list">
+            <div>
+              <div class="meta-item-label">Timeline</div>
+              <div class="meta-item-value">2 Months (2025)</div>
+            </div>
+            <div>
+              <div class="meta-item-label">Role</div>
+              <div class="meta-item-value">Data Science Intern</div>
+            </div>
+            <div>
+              <div class="meta-item-label">Languages</div>
+              <div class="meta-item-value">Python, Power BI Dax</div>
+            </div>
+            <div>
+              <div class="meta-item-label">Target Audience</div>
+              <div class="meta-item-value">Store Managers</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="btn-group" style="margin-top: var(--spacing-md);">
+          <a href="https://github.com/ahemedsh/DemandIQ-AI-Retail-Demand-Forecasting" target="_blank" rel="noopener" class="btn btn-primary">GitHub Repository</a>
+        </div>
+      </section>
+
+      <!-- Problem & Solution -->
+      <section class="detail-section">
+        <div class="detail-grid">
+          <div>
+            <h2 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">The Problem</h2>
+            <p>
+              Retail stores suffer huge financial leakages due to inefficient stock allocations. Over-stocking ties up valuable business capital in slow-moving items, while under-stocking popular products leads directly to missed revenue and negative customer loyalty reviews.
+            </p>
+            <p style="margin-top: 1rem;">
+              Store managers often rely on basic historical averages to guide restocking. However, they fail to take into account underlying features like seasonal sales variations, promotion spikes, and changes in buyer clustering distributions.
+            </p>
+          </div>
+          <div>
+            <h2 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">The Solution</h2>
+            <p>
+              DemandIQ handles these bottlenecks through a modular retail modeling pipeline. Utilizing Scikit-learn, the application parses past transaction histories and fits seasonal regression algorithms.
+            </p>
+            <p style="margin-top: 1rem;">
+              The platform exposes a clean dashboard visualizing low-stock critical events, forecasting daily sales demand with confidence boundaries, and generating automated, natural recommendations detailing which products need immediate restocking.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Architecture -->
+      <section class="detail-section">
+        <h2 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Process Architecture</h2>
+        <div class="architecture-box">
+          <svg viewBox="0 0 600 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Data Ingestion -->
+            <rect x="20" y="80" width="100" height="80" rx="8" fill="#F5F5F7" stroke="#E5E5E7" stroke-width="2"/>
+            <text x="32" y="115" fill="#111111" font-family="Inter" font-size="11" font-weight="700">POS Sales</text>
+            <text x="32" y="135" fill="#6E6E73" font-family="Inter" font-size="9" font-weight="500">Weekly Extracts</text>
+
+            <!-- Arrow 1 -->
+            <path d="M130 120H170" stroke="#111111" stroke-width="2"/>
+            <path d="M170 120L162 115M170 120L162 125" stroke="#111111" stroke-width="2"/>
+
+            <!-- SQL & Pandas Feature Store -->
+            <rect x="180" y="80" width="110" height="80" rx="8" fill="#F5F5F7" stroke="#E5E5E7" stroke-width="2"/>
+            <text x="192" y="115" fill="#111111" font-family="Inter" font-size="11" font-weight="700">Feature Store</text>
+            <text x="192" y="135" fill="#6E6E73" font-family="Inter" font-size="9" font-weight="500">Lag Variables</text>
+
+            <!-- Arrow 2 -->
+            <path d="M300 120H340" stroke="#111111" stroke-width="2"/>
+            <path d="M340 120L332 115M340 120L332 125" stroke="#111111" stroke-width="2"/>
+
+            <!-- ARIMA / Ridge Engine -->
+            <rect x="350" y="40" width="110" height="70" rx="8" fill="#F5F5F7" stroke="#E5E5E7" stroke-width="2"/>
+            <text x="362" y="75" fill="#111111" font-family="Inter" font-size="11" font-weight="700">Demand Model</text>
+            <text x="362" y="93" fill="#6E6E73" font-family="Inter" font-size="9" font-weight="500">Ridge Regression</text>
+
+            <!-- Power BI dashboards -->
+            <rect x="350" y="130" width="110" height="70" rx="8" fill="#F5F5F7" stroke="#E5E5E7" stroke-width="2"/>
+            <text x="362" y="165" fill="#111111" font-family="Inter" font-size="11" font-weight="700">Dashboard</text>
+            <text x="362" y="183" fill="#6E6E73" font-family="Inter" font-size="9" font-weight="500">Power BI Layouts</text>
+
+            <!-- Arrow 3 -->
+            <path d="M470 120H510" stroke="#111111" stroke-width="2"/>
+            <path d="M510 120L502 115M510 120L502 125" stroke="#111111" stroke-width="2"/>
+
+            <!-- Retail Store Manager -->
+            <rect x="520" y="80" width="60" height="80" rx="8" fill="#111111"/>
+            <text x="532" y="125" fill="#FFFFFF" font-family="Inter" font-size="12" font-weight="700">Manager</text>
+          </svg>
+        </div>
+      </section>
+
+      <!-- Key Features & Tech Stack -->
+      <section class="detail-section">
+        <div class="detail-grid">
+          <div>
+            <h2 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Key Features</h2>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
+              <li><strong>Demand Forecasting:</strong> Predicts daily sales trends 14 days in advance using regularized linear regression.</li>
+              <li><strong>Inventory Analysis:</strong> Monitors active stock lines and flags items approaching critical out-of-stock metrics.</li>
+              <li><strong>Customer Segmentation:</strong> Separates buyers into value categories to target promotional discounts.</li>
+              <li><strong>AI Recommendations:</strong> Automatically alerts managers when stock levels drop below optimal thresholds.</li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Tech Stack</h2>
+            <div class="project-tags" style="margin-bottom: 1.5rem;">
+              <span class="tag">Python</span>
+              <span class="tag">Scikit-learn</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">NumPy</span>
+              <span class="tag">Plotly</span>
+              <span class="tag">Power BI</span>
+            </div>
+            <h3 class="card-title" style="font-size: 1.1rem; margin-bottom: 0.5rem;">Key Challenge</h3>
+            <p>
+              Managing noisy transactional dataset extracts. Raw logs contained significant anomalies (e.g. bulk sales returns, system failures representing missing data). Resolved this by engineering a custom preprocessing outlier filter using local outlier factor algorithms.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Outcome -->
+      <section class="detail-section">
+        <h2 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Outcome & Impact</h2>
+        <p class="body-large" style="margin-bottom: 1.5rem;">
+          In simulation tests using public retail transactional datasets, DemandIQ forecasted demand trends with a mean absolute percentage error (MAPE) under 8.2%. The automated alerts successfully prevented simulated inventory runouts in 91% of tested scenarios.
+        </p>
+      </section>
+
+      <!-- Navigation -->
+      <section class="project-navigation">
+        <a href="ai-bi-platform.html" class="nav-proj-link">
+          <span class="nav-proj-sub">← Previous Project</span>
+          <span class="nav-proj-title">AI-Powered BI Platform</span>
+        </a>
+        <a href="andro-llm.html" class="nav-proj-link next">
+          <span class="nav-proj-sub">Next Project →</span>
+          <span class="nav-proj-title">ANDRO-LLM</span>
+        </a>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-text">
+        © 2026 Ahemed Sakeer Hussain. Built with clean CSS and semantic HTML.
+      </div>
+      <ul class="footer-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>

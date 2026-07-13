@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AIBUS - AI-Powered Business Utility Suite project details by Ahemed Sakeer Hussain.">
+  <title>AIBUS | Project Details</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER
+       ========================================================================== -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="../index.html" class="logo">
+        AHEMED SAKEER HUSSAIN
+        <span class="logo-dot"></span>
+      </a>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="../index.html#home" class="nav-link">Home</a></li>
+          <li><a href="../index.html#about" class="nav-link">About</a></li>
+          <li><a href="../index.html#projects" class="nav-link active">Projects</a></li>
+          <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- Project Header -->
+      <section class="project-header">
+        <a href="../index.html#projects" class="back-link">
+          ← Back to Projects
+        </a>
+        <h1 class="display-title" style="font-size: 2.75rem; margin-top: 1rem;">
+          AIBUS
+        </h1>
+        <p class="hero-subheadline" style="margin-bottom: var(--spacing-md);">AI-Powered Business Utility Suite</p>
+        
+        <div class="project-meta-grid">
+          <div>
+            <p class="text-secondary body-large">
+              An AI-powered Business Utility Suite featuring automated data pipeline, sales forecasting, customer segmentation, anomaly detection, and exportable reports. Designed to help small-to-medium retail brands monitor visual analytics metrics and forecast performance.
+            </p>
+          </div>
+          <div class="project-meta-list">
+            <div>
+              <div class="meta-item-label">Timeline</div>
+              <div class="meta-item-value">3 Months (2025)</div>
+            </div>
+            <div>
+              <div class="meta-item-label">Role</div>
+              <div class="meta-item-value">Solo Developer</div>
+            </div>
+            <div>
+              <div class="meta-item-label">Languages</div>
+              <div class="meta-item-value">Python, SQL</div>
+            </div>
+            <div>
+              <div class="meta-item-label">Interface</div>
+              <div class="meta-item-value">Streamlit Web</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="btn-group" style="margin-top: var(--spacing-md);">
+          <a href="https://github.com/ahemedsh/AIBUS-AI-Powered-Business-Utility-Suite" target="_blank" rel="noopener" class="btn btn-primary">GitHub Repository</a>
+        </div>
+      </section>
+
+      <!-- Problem & Solution -->
+      <section class="detail-section">
+        <div class="detail-grid">
+          <div>
+            <h2 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">The Problem</h2>
+            <p>
+              Small and medium enterprises (SMEs) face a challenge: they aggregate large quantities of transaction and log data but lack the dedicated analytics budgets of enterprise companies. Without robust toolsets, these businesses rely on manual spreadsheets to calculate historical summaries.
+            </p>
+            <p style="margin-top: 1rem;">
+              This results in delays, human errors, and a complete lack of forward-looking predictions (such as forecasting demand spikes or identifying rising cost anomalies before they impact the bottom line).
+            </p>
+          </div>
+          <div>
+            <h2 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">The Solution</h2>
+            <p>
+              This platform bridges that gap by deploying a lightweight, open-source BI stack. By engineering an automated Python data ingestion pipeline, raw logs are cleaned, loaded, and processed automatically.
+            </p>
+            <p style="margin-top: 1rem;">
+              The interactive Streamlit front-end renders historical sales trends, runs customer segmentation algorithms automatically to cluster buyer profiles, and fits predictive time-series models to output 30-day forecast projections.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Architecture -->
+      <section class="detail-section">
+        <h2 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">System Architecture</h2>
+        <div class="architecture-box">
+          <svg viewBox="0 0 600 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Source Data -->
+            <rect x="20" y="80" width="100" height="80" rx="8" fill="#F5F5F7" stroke="#E5E5E7" stroke-width="2"/>
+            <text x="32" y="115" fill="#111111" font-family="Inter" font-size="11" font-weight="700">Raw Data</text>
+            <text x="32" y="135" fill="#6E6E73" font-family="Inter" font-size="9" font-weight="500">CSV & SQL Logs</text>
+
+            <!-- Arrow 1 -->
+            <path d="M130 120H170" stroke="#111111" stroke-width="2" stroke-dasharray="4"/>
+            <path d="M170 120L162 115M170 120L162 125" stroke="#111111" stroke-width="2"/>
+
+            <!-- ETL / Processing Pipeline -->
+            <rect x="180" y="80" width="110" height="80" rx="8" fill="#F5F5F7" stroke="#E5E5E7" stroke-width="2"/>
+            <text x="192" y="115" fill="#111111" font-family="Inter" font-size="11" font-weight="700">ETL Pipeline</text>
+            <text x="192" y="135" fill="#6E6E73" font-family="Inter" font-size="9" font-weight="500">Pandas Engine</text>
+
+            <!-- Arrow 2 -->
+            <path d="M300 120H340" stroke="#111111" stroke-width="2" stroke-dasharray="4"/>
+            <path d="M340 120L332 115M340 120L332 125" stroke="#111111" stroke-width="2"/>
+
+            <!-- Machine Learning Model -->
+            <rect x="350" y="40" width="110" height="70" rx="8" fill="#F5F5F7" stroke="#E5E5E7" stroke-width="2"/>
+            <text x="362" y="75" fill="#111111" font-family="Inter" font-size="11" font-weight="700">ML Engine</text>
+            <text x="362" y="93" fill="#6E6E73" font-family="Inter" font-size="9" font-weight="500">Scikit-learn</text>
+
+            <!-- Visualization Streamlit -->
+            <rect x="350" y="130" width="110" height="70" rx="8" fill="#F5F5F7" stroke="#E5E5E7" stroke-width="2"/>
+            <text x="362" y="165" fill="#111111" font-family="Inter" font-size="11" font-weight="700">Dashboards</text>
+            <text x="362" y="183" fill="#6E6E73" font-family="Inter" font-size="9" font-weight="500">Streamlit / Plotly</text>
+
+            <!-- Arrow 3 -->
+            <path d="M470 120H510" stroke="#111111" stroke-width="2" stroke-dasharray="4"/>
+            <path d="M510 120L502 115M510 120L502 125" stroke="#111111" stroke-width="2"/>
+
+            <!-- User Interface -->
+            <rect x="520" y="80" width="60" height="80" rx="8" fill="#111111"/>
+            <text x="532" y="125" fill="#FFFFFF" font-family="Inter" font-size="12" font-weight="700">Recruiter</text>
+          </svg>
+        </div>
+      </section>
+
+      <!-- Key Features & Tech Stack -->
+      <section class="detail-section">
+        <div class="detail-grid">
+          <div>
+            <h2 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Key Features</h2>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
+              <li><strong>Interactive Dashboards:</strong> Instant visualization updates based on custom dates, regions, and categories.</li>
+              <li><strong>Automated Data Pipeline:</strong> Lightweight ETL checks format consistency, removes records containing critical null values, and parses time logs.</li>
+              <li><strong>Sales Forecasting:</strong> Integrates a linear regression / trend projection module to map seasonal growth and inventory runouts.</li>
+              <li><strong>Customer Segmentation:</strong> Calculates RFM (Recency, Frequency, Monetary) scores and clusters clients using k-means grouping.</li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Tech Stack</h2>
+            <div class="project-tags" style="margin-bottom: 1.5rem;">
+              <span class="tag">Python</span>
+              <span class="tag">Streamlit</span>
+              <span class="tag">Scikit-learn</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">Plotly</span>
+              <span class="tag">Matplotlib</span>
+              <span class="tag">SQL</span>
+            </div>
+            <h3 class="card-title" style="font-size: 1.1rem; margin-bottom: 0.5rem;">Key Challenge</h3>
+            <p>
+              Ensuring the predictive models performed fast enough for real-time dashboard adjustments. Initially, running validation loops on model updates blocked the interface. Resolved this by separating statistical model fitting tasks from the UI thread and caching computed model matrices using Streamlit's internal cache state mechanism.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Outcome & Screenshots -->
+      <section class="detail-section">
+        <h2 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Outcome & Impact</h2>
+        <p class="body-large" style="margin-bottom: 1.5rem;">
+          The system demonstrates how small businesses can benefit from forecasting models with minimal maintenance overhead. In localized testing, the data ingestion pipeline correctly parsed 10,000+ transactional records, returning 30-day forecast predictions under 2 seconds.
+        </p>
+      </section>
+
+      <!-- Navigation -->
+      <section class="project-navigation">
+        <a href="ecowatt.html" class="nav-proj-link">
+          <span class="nav-proj-sub">← Previous Project</span>
+          <span class="nav-proj-title">EcoWatt</span>
+        </a>
+        <a href="demandiq.html" class="nav-proj-link next">
+          <span class="nav-proj-sub">Next Project →</span>
+          <span class="nav-proj-title">DemandIQ</span>
+        </a>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-text">
+        © 2026 Ahemed Sakeer Hussain. Built with clean CSS and semantic HTML.
+      </div>
+      <ul class="footer-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>

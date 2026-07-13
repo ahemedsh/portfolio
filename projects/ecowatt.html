@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EcoWatt utility predictor project details by Ahemed Sakeer Hussain.">
+  <title>EcoWatt | Project Details</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER
+       ========================================================================== -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="../index.html" class="logo">
+        AHEMED SAKEER HUSSAIN
+        <span class="logo-dot"></span>
+      </a>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="../index.html#home" class="nav-link">Home</a></li>
+          <li><a href="../index.html#about" class="nav-link">About</a></li>
+          <li><a href="../index.html#projects" class="nav-link active">Projects</a></li>
+          <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- Project Header -->
+      <section class="project-header">
+        <a href="../index.html#projects" class="back-link">
+          ← Back to Projects
+        </a>
+        <h1 class="display-title" style="font-size: 2.75rem; margin-top: 1rem;">
+          EcoWatt
+        </h1>
+        <p class="hero-subheadline" style="margin-bottom: var(--spacing-md);">Residential Electricity Consumption & Cost Estimator</p>
+        
+        <div class="project-meta-grid">
+          <div>
+            <p class="text-secondary body-large">
+              A desktop utility predicting residential electrical load variations, estimating billing periods using regional price structures, and recommending personalized household conservation strategies.
+            </p>
+          </div>
+          <div class="project-meta-list">
+            <div>
+              <div class="meta-item-label">Timeline</div>
+              <div class="meta-item-value">1.5 Months (2024)</div>
+            </div>
+            <div>
+              <div class="meta-item-label">Role</div>
+              <div class="meta-item-value">Main Architect & Developer</div>
+            </div>
+            <div>
+              <div class="meta-item-label">Languages</div>
+              <div class="meta-item-value">Python (Tkinter)</div>
+            </div>
+            <div>
+              <div class="meta-item-label">Backend</div>
+              <div class="meta-item-value">Regression Estimators</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="btn-group" style="margin-top: var(--spacing-md);">
+          <a href="https://github.com/Anwin-127/ecowatt" target="_blank" rel="noopener" class="btn btn-primary">GitHub Repository</a>
+        </div>
+      </section>
+
+      <!-- Problem & Solution -->
+      <section class="detail-section">
+        <div class="detail-grid">
+          <div>
+            <h2 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">The Problem</h2>
+            <p>
+              Many households struggle to manage their seasonal utility budgets because power consumption bills are retroactively delivered at the end of each billing cycle. Without real-time projections, users cannot easily connect appliance usage behavior with active billing metrics.
+            </p>
+            <p style="margin-top: 1rem;">
+              Existing utility tracking software is either restricted to expensive enterprise smart hardware integrations or requires complex command line tools that general consumers struggle to execute.
+            </p>
+          </div>
+          <div>
+            <h2 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">The Solution</h2>
+            <p>
+              EcoWatt addresses this through a lightweight cross-platform desktop UI built with Python's Tkinter window toolkit. Users key in basic configuration metrics (appliance capacities, daily runtime averages, and regional billing rules).
+            </p>
+            <p style="margin-top: 1rem;">
+              The system calculates active estimates using seasonal coefficient multipliers, showing predicted consumption levels and identifying potential cost conservation adjustments instantly.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Architecture -->
+      <section class="detail-section">
+        <h2 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Process Architecture</h2>
+        <div class="architecture-box">
+          <svg viewBox="0 0 600 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- User Input Config -->
+            <rect x="20" y="80" width="110" height="80" rx="8" fill="#F5F5F7" stroke="#E5E5E7" stroke-width="2"/>
+            <text x="32" y="115" fill="#111111" font-family="Inter" font-size="11" font-weight="700">Appliance Input</text>
+            <text x="32" y="135" fill="#6E6E73" font-family="Inter" font-size="9" font-weight="500">Wattage & Runtime</text>
+
+            <!-- Arrow 1 -->
+            <path d="M140 120H170" stroke="#111111" stroke-width="2"/>
+            <path d="M170 120L162 115M170 120L162 125" stroke="#111111" stroke-width="2"/>
+
+            <!-- Calculation Engine -->
+            <rect x="180" y="80" width="120" height="80" rx="8" fill="#F5F5F7" stroke="#E5E5E7" stroke-width="2"/>
+            <text x="192" y="115" fill="#111111" font-family="Inter" font-size="11" font-weight="700">Predictive Engine</text>
+            <text x="192" y="135" fill="#6E6E73" font-family="Inter" font-size="9" font-weight="500">Regional Tariffs</text>
+
+            <!-- Arrow 2 -->
+            <path d="M310 120H340" stroke="#111111" stroke-width="2"/>
+            <path d="M340 120L332 115M340 120L332 125" stroke="#111111" stroke-width="2"/>
+
+            <!-- Tkinter UI Layout -->
+            <rect x="350" y="80" width="120" height="80" rx="8" fill="#F5F5F7" stroke="#E5E5E7" stroke-width="2"/>
+            <text x="362" y="115" fill="#111111" font-family="Inter" font-size="11" font-weight="700">Tkinter Frontend</text>
+            <text x="362" y="135" fill="#6E6E73" font-family="Inter" font-size="9" font-weight="500">Real-time Graphs</text>
+
+            <!-- Arrow 3 -->
+            <path d="M480 120H510" stroke="#111111" stroke-width="2"/>
+            <path d="M510 120L502 115M510 120L502 125" stroke="#111111" stroke-width="2"/>
+
+            <!-- Household Resident -->
+            <rect x="520" y="80" width="60" height="80" rx="8" fill="#111111"/>
+            <text x="532" y="125" fill="#FFFFFF" font-family="Inter" font-size="12" font-weight="700">User</text>
+          </svg>
+        </div>
+      </section>
+
+      <!-- Key Features & Tech Stack -->
+      <section class="detail-section">
+        <div class="detail-grid">
+          <div>
+            <h2 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Key Features</h2>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
+              <li><strong>Electricity Consumption Estimator:</strong> Accurately projects daily and monthly kilowatt-hour (kWh) loads.</li>
+              <li><strong>Real-time Cost Prediction:</strong> Dynamically calculates costs matching progressive regional slab structures.</li>
+              <li><strong>Household Profiles:</strong> Permits saving multiple user profile templates (e.g. Summer vs. Winter load levels).</li>
+              <li><strong>Desktop Deployment:</strong> Compiles to small executable files for lightweight offline installation.</li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Tech Stack</h2>
+            <div class="project-tags" style="margin-bottom: 1.5rem;">
+              <span class="tag">Python</span>
+              <span class="tag">Tkinter</span>
+              <span class="tag">NumPy</span>
+              <span class="tag">Scikit-learn</span>
+            </div>
+            <h3 class="card-title" style="font-size: 1.1rem; margin-bottom: 0.5rem;">Key Challenge</h3>
+            <p>
+              Maintaining window resizing layouts in vanilla Tkinter. Default layouts often distort or crop element rendering across varying screen scaling models. Resolved this by building a custom grid configuration wrapper ensuring proportional panel scaling.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Outcome -->
+      <section class="detail-section">
+        <h2 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Outcome & Impact</h2>
+        <p class="body-large" style="margin-bottom: 1.5rem;">
+          EcoWatt demonstrates how clean statistical calculations can replace heavy SaaS tracking subscriptions. On localized user trials, household budget projections matched final utility statements with a mean error rate under 4.5%.
+        </p>
+      </section>
+
+      <!-- Navigation -->
+      <section class="project-navigation">
+        <a href="andro-llm.html" class="nav-proj-link">
+          <span class="nav-proj-sub">← Previous Project</span>
+          <span class="nav-proj-title">ANDRO-LLM</span>
+        </a>
+        <a href="ai-bi-platform.html" class="nav-proj-link next">
+          <span class="nav-proj-sub">Next Project →</span>
+          <span class="nav-proj-title">AI-Powered BI Platform</span>
+        </a>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-text">
+        © 2026 Ahemed Sakeer Hussain. Built with clean CSS and semantic HTML.
+      </div>
+      <ul class="footer-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
