@@ -832,6 +832,14 @@ img, svg {
   justify-content: center;
   color: var(--color-accent);
   flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.contact-icon:hover {
+  background-color: var(--bg-primary);
+  border-color: var(--text-secondary);
+  color: var(--color-accent-hover);
+  transform: translateY(-2px);
 }
 
 .contact-label {
