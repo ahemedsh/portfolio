@@ -44,7 +44,7 @@
         <div class="project-meta-grid">
           <div>
             <p class="text-secondary body-large">
-              A retail intelligence suite focused on predicting daily customer demand, identifying out-of-stock risks, segmenting purchasing frequencies, and generating automated executive inventory reviews.
+              A production-style demand forecasting platform processing over 1M+ retail records, achieving 94.9% R2 using Random Forest. Engineered an end-to-end ML pipeline integrating automated preprocessing, feature engineering, model selection, forecasting, and interactive KPI dashboards.
             </p>
           </div>
           <div class="project-meta-list">
@@ -58,7 +58,7 @@
             </div>
             <div>
               <div class="meta-item-label">Languages</div>
-              <div class="meta-item-value">Python, Power BI Dax</div>
+              <div class="meta-item-value">Python</div>
             </div>
             <div>
               <div class="meta-item-label">Target Audience</div>
@@ -119,10 +119,10 @@
             <path d="M300 120H340" stroke="#111111" stroke-width="2"/>
             <path d="M340 120L332 115M340 120L332 125" stroke="#111111" stroke-width="2"/>
 
-            <!-- ARIMA / Ridge Engine -->
+            <!-- Random Forest Engine -->
             <rect x="350" y="40" width="110" height="70" rx="8" fill="#F5F5F7" stroke="#E5E5E7" stroke-width="2"/>
             <text x="362" y="75" fill="#111111" font-family="Inter" font-size="11" font-weight="700">Demand Model</text>
-            <text x="362" y="93" fill="#6E6E73" font-family="Inter" font-size="9" font-weight="500">Ridge Regression</text>
+            <text x="362" y="93" fill="#6E6E73" font-family="Inter" font-size="9" font-weight="500">Random Forest</text>
 
             <!-- Power BI dashboards -->
             <rect x="350" y="130" width="110" height="70" rx="8" fill="#F5F5F7" stroke="#E5E5E7" stroke-width="2"/>
@@ -146,7 +146,7 @@
           <div>
             <h2 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Key Features</h2>
             <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
-              <li><strong>Demand Forecasting:</strong> Predicts daily sales trends 14 days in advance using regularized linear regression.</li>
+              <li><strong>Demand Forecasting:</strong> Predicts daily sales trends 14 days in advance using Random Forest.</li>
               <li><strong>Inventory Analysis:</strong> Monitors active stock lines and flags items approaching critical out-of-stock metrics.</li>
               <li><strong>Customer Segmentation:</strong> Separates buyers into value categories to target promotional discounts.</li>
               <li><strong>AI Recommendations:</strong> Automatically alerts managers when stock levels drop below optimal thresholds.</li>
@@ -156,11 +156,12 @@
             <h2 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Tech Stack</h2>
             <div class="project-tags" style="margin-bottom: 1.5rem;">
               <span class="tag">Python</span>
-              <span class="tag">Scikit-learn</span>
+              <span class="tag">Streamlit</span>
               <span class="tag">Pandas</span>
-              <span class="tag">NumPy</span>
               <span class="tag">Plotly</span>
-              <span class="tag">Power BI</span>
+              <span class="tag">Scikit-learn</span>
+              <span class="tag">XGBoost</span>
+              <span class="tag">Random Forest</span>
             </div>
             <h3 class="card-title" style="font-size: 1.1rem; margin-bottom: 0.5rem;">Key Challenge</h3>
             <p>
@@ -174,7 +175,7 @@
       <section class="detail-section">
         <h2 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Outcome & Impact</h2>
         <p class="body-large" style="margin-bottom: 1.5rem;">
-          In simulation tests using public retail transactional datasets, DemandIQ forecasted demand trends with a mean absolute percentage error (MAPE) under 8.2%. The automated alerts successfully prevented simulated inventory runouts in 91% of tested scenarios.
+          Developed as a production-style demand forecasting platform, the system successfully processed over 1M+ retail records, achieving a 94.9% R2 accuracy score using Random Forest. The end-to-end ML pipeline ensures efficient preprocessing, feature engineering, and robust demand projections.
         </p>
       </section>
 
