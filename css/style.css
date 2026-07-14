@@ -343,10 +343,10 @@ img, svg {
 }
 
 .hero-grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
   align-items: center;
-  text-align: center;
+  text-align: left;
   gap: var(--spacing-lg);
   width: 100%;
 }
@@ -358,11 +358,72 @@ img, svg {
   max-width: 800px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .hero-content .btn-group {
+  justify-content: flex-start;
+}
+
+/* Hero Profile Image with Subtle Animation */
+.hero-image-wrap {
+  position: relative;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: pageFadeIn 0.8s var(--transition-ease) 0.2s forwards;
+}
+
+.hero-image-glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--color-accent) 0%, transparent 70%);
+  opacity: 0.12;
+  filter: blur(30px);
+  z-index: 0;
+  animation: subtleGlow 6s ease-in-out infinite alternate;
+}
+
+.hero-profile-image {
+  position: relative;
+  z-index: 1;
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--bg-primary);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.15), 0 0 0 1px var(--color-border);
+  animation: subtleFloat 6s ease-in-out infinite;
+}
+
+@keyframes subtleFloat {
+  0%, 100% {
+    transform: translateY(0);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.15), 0 0 0 1px var(--color-border);
+  }
+  50% {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1), 0 0 0 1px var(--text-secondary);
+  }
+}
+
+@keyframes subtleGlow {
+  0%, 100% {
+    transform: scale(0.95);
+    opacity: 0.08;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.16;
+  }
 }
 
 .hero-badge {
@@ -1161,6 +1222,15 @@ textarea.form-control {
     grid-template-columns: 1fr;
     text-align: center;
     gap: var(--spacing-xl);
+  }
+  
+  .hero-content {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero-content .btn-group {
+    justify-content: center;
   }
   
   .hero-badge, .hero-desc {
