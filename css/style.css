@@ -815,6 +815,10 @@ img, svg {
   white-space: nowrap;
 }
 
+.project-actions a:nth-child(3):last-child {
+  grid-column: span 2;
+}
+
 /* ==========================================================================
    CERTIFICATIONS SECTION
    ========================================================================== */
